@@ -14,7 +14,6 @@ export default async function api(req: Request, res: Response): Promise<void> {
 	const { versions } = await superfetch<VanillaProject>("https://launchermeta.mojang.com/mc/game/version_manifest.json", 1000*60*15);
 
 	// Get URL query
-	const query = req.query?.query?.toString() ?? "";
 	const { tag } = req.params;
 
 	// Get download url
