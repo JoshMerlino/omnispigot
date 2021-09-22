@@ -26,7 +26,7 @@ export default async function api(req: Request, res: Response): Promise<void> {
 		.map(async v => (await v).downloads.server.url)[0];
 
 	// Set file name
-	const name = `server-${tag}.jar`;
+	const name = `minecraft_server-${tag}.jar`;
 
 	// Get downloaded location
 	const save = path.resolve(`./data/${name}`);

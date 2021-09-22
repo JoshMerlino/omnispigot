@@ -6,3 +6,7 @@
   website: https://www.papermc.io/
   description: "Our fork of the BungeeCord software, with improved Forge support and more features."
   type: PROXY_SERVER
+- name: vanilla
+  website: https://www.minecraft.net/en-us/download/server
+  description: "Download the Minecraft: Java Edition Server."
+  type: GENERAL_SERVER
