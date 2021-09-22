@@ -1,25 +1,6 @@
 import { Request, Response } from "express";
 import superfetch from "../../../src/util/superfetch";
 
-declare interface WaterfallBuilds {
-	builds: {
-		version: string;
-		build: number;
-		time: string;
-		changes: {
-			commit: string;
-			summary: string;
-			message: string;
-		}[];
-		downloads: {
-			application: {
-				name: string;
-				sha256: string;
-			}
-		}
-	}[];
-}
-
 export const route = [
 	"v1/waterfall/v:tag/builds"
 ];
@@ -40,7 +21,7 @@ export default async function api(req: Request, res: Response): Promise<void> {
 				version: build.version,
 				build: build.build.toString(),
 				time: new Date(build.time).getTime(),
-				sha256: build.downloads.application.sha256,
+				hash: `sha256-${build.downloads.application.sha256}`,
 				download: `/api/v1/waterfall/v${build.version}/${build.build}/download`
 			}))
 	});

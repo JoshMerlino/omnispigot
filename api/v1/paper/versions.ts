@@ -19,9 +19,6 @@ export default async function api(req: Request, res: Response): Promise<void> {
 	// Get URL query
 	const query = req?.query?.query?.toString() ?? "";
 
-	// Get request origin
-	const origin = req.hostname || req.headers.host?.split(":")[0];
-
 	res.json({
 		versions: await Promise.all(versions
 			.filter(v => v.match(query))
