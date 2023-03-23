@@ -38,7 +38,7 @@
         "@typescript-eslint/parser": "^4.33.0",
         "concurrently": "^7.6.0",
         "eslint": "^7.32.0",
-        "nodemon": "^2.0.21",
+        "nodemon": "^2.0.22",
         "typescript": "^5.0.2",
         "typescript-eslint": "0.0.1-alpha.0"
     },
