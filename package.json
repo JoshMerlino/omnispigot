@@ -36,7 +36,7 @@
         "@types/webpack-env": "^1.18.0",
         "@typescript-eslint/eslint-plugin": "^4.33.0",
         "@typescript-eslint/parser": "^4.33.0",
-        "concurrently": "^7.6.0",
+        "concurrently": "^8.0.1",
         "eslint": "^7.32.0",
         "nodemon": "^2.0.22",
         "typescript": "^5.0.2",
